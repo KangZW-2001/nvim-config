@@ -1,4 +1,4 @@
-require("mason").setup({
+require("mason").setup({ 
   ui = {
       icons = {
           package_installed = "✓",
@@ -21,3 +21,22 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").lua_ls.setup {
   capabilities = capabilities,
 }
+
+require("lspconfig").clangd.setup{
+    -- capabilities = {
+    --     textDocument = {
+    --         semanticHighlightingCapabilities = {
+    --             semanticHighlighting = true
+    --         }
+    --
+    --     }
+    -- },
+    -- capabilities = capabilities,
+}
+-- require("lspconfig").clangd.setup {
+--     on_attach = function (client, bufnr)
+--         client.server_capabilities.signatureHelpProvider = false
+--         require("plugin.on_attach(client, bufnr)
+--     end,
+--     capabilities = capabilities
+-- }

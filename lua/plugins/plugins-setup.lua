@@ -36,11 +36,18 @@ return require('packer').startup(function(use)
         'nvim-tree/nvim-web-devicons', -- optional
     },
   }
+
     use('christoomey/vim-tmux-navigator')
+    use ("bluz71/vim-nightfly-colors")
+    use('neovim/nvim-lsp')
+    use('robert-oleynik/clangd-nvim')
+    
+
     use{
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+    use ('Mofiqul/dracula.nvim')
     use{
         "windwp/nvim-autopairs",
         config = function ()
@@ -63,10 +70,12 @@ return require('packer').startup(function(use)
     use "akinsho/bufferline.nvim" -- buffer分割线
   use "lewis6991/gitsigns.nvim" -- 左则git提示
 
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.4',
+-- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+
   if packer_bootstrap then
     require('packer').sync()
   end

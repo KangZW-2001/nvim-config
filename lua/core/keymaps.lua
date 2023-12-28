@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+
 local keymap = vim.keymap
 
 -- 插入模式<ESC>
@@ -17,15 +18,15 @@ keymap.set("n", "<leader>sh", "<C-w>s")
 keymap.set("n", "<leader>l", "$") -- 移动到行尾
 keymap.set("n", "<leader>h", "^")
 
-
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- --------------------------插件--------------------------------
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-
-
+-- 切换buffer
+keymap.set("n", "<leader>k", ":bnext<CR>")
+keymap.set("n", "<leader>j", ":bprevious<CR>")
 
 
 
